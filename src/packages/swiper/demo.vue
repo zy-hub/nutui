@@ -174,7 +174,7 @@ export default createDemo({
 }
 </style>
 <style>
-.swiper-container /deep/ .swiper-pagination-bullet-active {
+.swiper-container ::v-deep .swiper-pagination-bullet-active {
   background: linear-gradient(
     90deg,
     rgba(250, 32, 12, 1) 0%,
@@ -188,7 +188,7 @@ export default createDemo({
   background: rgba(255, 255, 255, 0.51) !important;
   border-radius: 2px !important;
 }
-.swiper1 /deep/ .swiper-pagination-bullet-active {
+.swiper1 ::v-deep .swiper-pagination-bullet-active {
   background: rgba(255, 255, 255, 1) !important;
 }
 /* demo2 */

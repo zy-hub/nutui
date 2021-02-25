@@ -36,7 +36,7 @@ export default defineComponent({
       searchIndex: 0,
       searchList: [],
       searchVal: '',
-      searchCName: ''
+      searchCurName: ''
     });
     onMounted(() => {
       const files = require.context('@/packages', true, /doc\.md$/);
@@ -65,7 +65,7 @@ export default defineComponent({
           });
           // console.log('rx2', data.searchList.length, data.searchList);
         } else {
-          data.searchCName = '';
+          data.searchCurName = '';
           data.searchIndex = 0;
           data.searchList = [];
         }

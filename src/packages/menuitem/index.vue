@@ -55,7 +55,7 @@ import {
 } from 'vue';
 import { createComponent } from '@/utils/create';
 import { useParent } from '@/utils/useRelation/useParent';
-import { MENU_KEY } from './../menu/index.vue';
+import { MENU_KEY } from '@/packages/menu/index.vue';
 import Icon from '@/packages/icon/index.vue';
 const { create } = createComponent('menu-item');
 

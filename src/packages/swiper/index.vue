@@ -138,7 +138,7 @@ export default create({
     rgba(250, 32, 12, 0.65) 100%
   );
 }
-.swiper-pagination /deep/ .swiper-pagination-bullet-active {
+.swiper-pagination ::v-deep .swiper-pagination-bullet-active {
   width: 10px;
   border-radius: 3px;
 }

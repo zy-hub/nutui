@@ -84,8 +84,8 @@ module.exports = {
       .use('vue-loader')
       .loader('vue-loader')
       .end()
-      .use(path.resolve(__dirname, './loader/md-vue/index.js'))
-      .loader(path.resolve(__dirname, './loader/md-vue/index.js'))
+      .use(path.resolve(__dirname, './libs/md-vue-loader/index.js'))
+      .loader(path.resolve(__dirname, './libs/md-vue-loader/index.js'))
       .end();
   }
 };

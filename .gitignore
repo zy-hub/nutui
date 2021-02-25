@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-/libs
+/libs/cli/dist_cli
 /jd/upload.js
 yarn.lock
 package-lock.json
