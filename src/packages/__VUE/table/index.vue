@@ -12,12 +12,7 @@
           >
             {{ item.title }}
             <slot name="icon"></slot>
-            <slot :name="`icon-${item.key}`"></slot>
-            <nut-icon
-              v-if="!$slots.icon && !$slots[`icon-${item.key}`] && item.sorter"
-              name="down-arrow"
-              size="12px"
-            ></nut-icon>
+            <nut-icon v-if="!$slots.icon && item.sorter" name="down-arrow" size="12px"></nut-icon>
           </span>
         </view>
       </view>
@@ -30,12 +25,7 @@
             :key="value"
           >
             {{ typeof item[value] !== 'function' ? item[value] : '' }}
-            <RenderColumn :slots="item[value]" :data="item" v-if="typeof item[value] === 'function'"></RenderColumn>
-            <RenderColumn
-              :slots="getColumnItem(value).render"
-              :data="item"
-              v-else-if="typeof getColumnItem(value).render === 'function'"
-            ></RenderColumn>
+            <RenderColumn :slots="item[value]" v-if="typeof item[value] === 'function'"></RenderColumn>
           </span>
         </view>
       </view>

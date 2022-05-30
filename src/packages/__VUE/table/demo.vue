@@ -22,12 +22,6 @@
     <nut-table :columns="columns3" :data="data5"> </nut-table>
     <h2>支持排序</h2>
     <nut-table :columns="columns6" :data="data6" @sorter="handleSorter"> </nut-table>
-    <h2>支持自定义表头icon</h2>
-    <nut-table :columns="columns1" :data="data1">
-      <template #icon-name>
-        <nut-icon name="people"></nut-icon>
-      </template>
-    </nut-table>
   </div>
 </template>
 
@@ -104,10 +98,7 @@ export default createDemo({
         {
           title: '姓名',
           key: 'name',
-          align: 'center',
-          render(data) {
-            return `${data.name}(${data.sex})`;
-          }
+          align: 'center'
         },
         {
           title: '性别',
@@ -191,8 +182,7 @@ export default createDemo({
           name: 'Tom',
           sex: '男',
           record: '小学',
-          render: (data) => {
-            console.log(data);
+          render: () => {
             return h(
               Button,
               {
@@ -257,7 +247,8 @@ export default createDemo({
       timer: null as number | null,
       summary: () => {
         return {
-          value: '这是总结栏'
+          value: '这是总结栏',
+          colspan: 5
         };
       }
     });
